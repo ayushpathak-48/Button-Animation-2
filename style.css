@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a2228;
+}
+
+div {
+    position: relative;
+    z-index: 1;
+    height: 70px;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.cta-btn {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #abe9cd;
+    background-color: #fce043;
+    background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    border: 0;
+    color: white;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    transition:all 0.5s ease;
+}
+
+.cta-btn:hover{
+
+    transform:scale(1.1);
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 50px;
+}
+
+.prt{
+    opacity:0;
+    transition:all 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+#button:hover .prt{
+    opacity:1;
+}
+
+.part1{
+    content:'';
+    display:block;
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    background-color: hotpink;
+    position: absolute;
+    top:-20px;
+    left:15px;
+    animation:rotate-y 2s infinite;
+    animation-timing-function: ease;
+    z-index: 3;
+}
+
+.part2{
+    content:'';
+    display:block;
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    top:-20px;
+    left:15px;
+    animation:rotate-y 2s infinite;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+    z-index: 3;
+}
+
+.part3{
+    content:'';
+    display:block;
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    background-color: #b80d57;
+    position: absolute;
+    top:-20px;
+    left:15px;
+    animation:rotate-y 2s infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    z-index: 3;
+}
+
+.par4{
+    content:'';
+    display:block;
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    background-color: deepskyblue;
+    position: absolute;
+    top:-20px;
+    left:15px;
+    animation:rotate-y 2s infinite;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    z-index: 3;
+}
+
+@keyframes rotate-y{
+    0%{
+        position:-20px;
+        left:15px;
+        z-index: 3;
+    }
+    50%{
+        top:80px;
+        left:165px;
+        z-index: 3;
+    }
+    51%{
+        z-index: 1;
+    }
+    100%{
+        z-index: 1;
+        left: 15px;
+    }
+}
